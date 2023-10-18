@@ -1,6 +1,10 @@
 package com.travel_agency.travel_agency.models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "clients_info")
@@ -8,8 +12,7 @@ public class ClientInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String First_Name, Second_Name, Email;
-    private int Phone_Number;
+    private String First_Name, Second_Name, Email, Pass;
 
     public Long getId() {
         return id;
@@ -43,11 +46,18 @@ public class ClientInfo {
         Email = email;
     }
 
-    public int getPhone_Number() {
-        return Phone_Number;
+    public String getPass() {
+        return Pass;
     }
 
-    public void setPhone_Number(int phone_Number) {
-        Phone_Number = phone_Number;
+    public void setPass(String pass) {
+        Pass = pass;
+    }
+
+    public ClientInfo(String first_Name, String second_Name, String email, String pass) {
+        First_Name = first_Name;
+        Second_Name = second_Name;
+        Email = email;
+        Pass = pass;
     }
 }
