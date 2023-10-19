@@ -16,8 +16,8 @@ public class MainController {
     private ClientRepository clientRepository;
 
     @GetMapping("/")
-    public String home(Model model){
-        model.addAttribute("title", "Main page");
+    public String sign_in(Model model){
+        // model.addAttribute("title", "Main page");
         return "sign-in";
     }
     @PostMapping("/")
@@ -25,5 +25,10 @@ public class MainController {
         ClientInfo client = new ClientInfo(First_Name, Second_Name, Email, Pass);
         clientRepository.save(client);
         return "redirect:/main-page";
+    }
+    @GetMapping("/main-page")
+    public String main_page(Model model){
+        // model.addAttribute("title", "Main page");
+        return "main-page";
     }
 }
