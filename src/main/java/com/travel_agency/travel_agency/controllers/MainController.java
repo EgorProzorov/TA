@@ -18,17 +18,22 @@ public class MainController {
     @GetMapping("/")
     public String sign_in(Model model){
         // model.addAttribute("title", "Main page");
-        return "sign-in";
+        return "main";
     }
-    @PostMapping("/")
-    public String getUserInfo(@RequestParam String First_Name, @RequestParam String Second_Name, @RequestParam String Email, @RequestParam String Pass, Model model){
-        ClientInfo client = new ClientInfo(First_Name, Second_Name, Email, Pass);
-        clientRepository.save(client);
-        return "redirect:/main-page";
+    @GetMapping("/registration")
+    public String registration(Model model){
+        return "registration";
     }
-    @GetMapping("/main-page")
-    public String main_page(Model model){
-        // model.addAttribute("title", "Main page");
-        return "main-page";
-    }
+
+//    @PostMapping("/login")
+//    public String getUserInfo(@RequestParam String First_Name, @RequestParam String Second_Name, @RequestParam String Email, @RequestParam String Pass, Model model){
+//        ClientInfo client = new ClientInfo(First_Name, Second_Name, Email, Pass);
+//        clientRepository.save(client);
+//        return "redirect:/main-page";
+//    }
+//    @GetMapping("/login")
+//    public String main_page(Model model){
+//        return "redirect:/main";
+//    }
+
 }
