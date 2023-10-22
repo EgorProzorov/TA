@@ -12,7 +12,7 @@ public class ClientInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String First_Name, Second_Name, Email, Pass;
+    private String First_Name, Second_Name, email, pass;
 
     public Long getId() {
         return id;
@@ -39,25 +39,25 @@ public class ClientInfo {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
     public String getPass() {
-        return Pass;
+        return pass;
     }
 
     public void setPass(String pass) {
-        Pass = pass;
+        this.pass = pass;
     }
 
     public ClientInfo(String first_Name, String second_Name, String email, String pass) {
         First_Name = first_Name;
         Second_Name = second_Name;
-        Email = email;
-        Pass = pass;
+        this.email = email;
+        this.pass = pass;
     }
 }

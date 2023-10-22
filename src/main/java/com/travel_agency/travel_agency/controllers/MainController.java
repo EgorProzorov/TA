@@ -20,10 +20,10 @@ public class MainController {
         // model.addAttribute("title", "Main page");
         return "main";
     }
-    @GetMapping("/registration")
-    public String registration(Model model){
-        return "registration";
-    }
+//    @GetMapping("/registration")
+//    public String registration(Model model){
+//        return "registration";
+//    }
 
 //    @PostMapping("/login")
 //    public String getUserInfo(@RequestParam String First_Name, @RequestParam String Second_Name, @RequestParam String Email, @RequestParam String Pass, Model model){
