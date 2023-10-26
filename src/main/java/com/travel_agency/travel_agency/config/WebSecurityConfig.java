@@ -22,6 +22,7 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/","/registration", "/style/**").permitAll()
                         .anyRequest().authenticated()
@@ -40,7 +41,7 @@ public class WebSecurityConfig {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
                 .passwordEncoder(NoOpPasswordEncoder.getInstance())
-                .usersByUsernameQuery("select email, pass from clients_info where email=?");
+                .usersByUsernameQuery("select email, pass,active from clients_info where email=?");
 
     }
 }

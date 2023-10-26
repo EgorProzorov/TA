@@ -16,7 +16,7 @@ public class MainController {
     private ClientRepository clientRepository;
 
     @GetMapping("/")
-    public String sign_in(Model model){
+    public String home(Model model){
         // model.addAttribute("title", "Main page");
         return "main";
     }
