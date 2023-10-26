@@ -15,7 +15,7 @@ public class RegistrationController {
     @Autowired
     private ClientRepository clientRepo;
     @GetMapping("/registration")
-    public String registration(Model model){
+    public String registration(){
         return "registration";
     }
     @PostMapping("/registration")
@@ -25,6 +25,7 @@ public class RegistrationController {
             model.put("message", "User exist!");
             return "registration";
         }
+        clientRepo.save(client);
 
         return "redirect:/login";
     }

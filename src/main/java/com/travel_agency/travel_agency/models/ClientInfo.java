@@ -12,6 +12,7 @@ public class ClientInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String First_Name, Second_Name, email, pass;
 
     public Long getId() {

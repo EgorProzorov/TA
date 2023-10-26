@@ -24,12 +24,11 @@ public class MainController {
 //    public String registration(Model model){
 //        return "registration";
 //    }
-
-//    @PostMapping("/login")
+//    @PostMapping("/registration")
 //    public String getUserInfo(@RequestParam String First_Name, @RequestParam String Second_Name, @RequestParam String Email, @RequestParam String Pass, Model model){
 //        ClientInfo client = new ClientInfo(First_Name, Second_Name, Email, Pass);
 //        clientRepository.save(client);
-//        return "redirect:/main-page";
+//        return "redirect:/main";
 //    }
 //    @GetMapping("/login")
 //    public String main_page(Model model){

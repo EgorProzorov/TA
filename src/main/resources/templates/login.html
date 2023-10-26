@@ -8,11 +8,11 @@
 <body>
     <div class="registration-container">
         <h2>Registration in tour agency</h2>
-        <form th:action="@{/login}" method="post">
-            <label for="username">User name(email):</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="text" id="password" name="password" required>
+        <form action="/login" method="post">
+            <label for="email">User name(email) :</label>
+            <input type="text" id="email" name="email">
+            <label for="pass">Password:</label>
+            <input type="text" id="pass" name="pass">
             <button type="submit" class="btn btn-success">Sign in</button>
         </form>
     </div>
